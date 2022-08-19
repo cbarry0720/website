@@ -9,30 +9,66 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
-    <style>
-        div{
-            float: left;
+    <script>
+        function email() {
+            window.open("mailto:cwbarry@umass.edu")
         }
-
-        body {
-            padding: 20px;
+        function overlayResume(){
+            document.getElementById("resume").removeAttribute("hidden")
+            document.getElementById("resume-button").removeAttribute("hidden")
         }
-
-        img {
-            float: right;
+        function hideResume(){
+            document.getElementById("resume").setAttribute("hidden", 1)
+            document.getElementById("resume-button").setAttribute("hidden", 1)
         }
-    </style>
+    </script>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 
 <body>
-    <div>
+    <div class="about-container">
         <h1>This is Chris Barry's Website</h1>
-        <p>My LinkedIn can be found <a target="_blank" href="http://www.linkedin.com/in/christopherwbarry">HERE</a>
-        </p>
-        <p>My portfolio can be found <a target="_blank" href="http://www.github.com/cbarry0720">HERE</a></p>
     </div>
-    <img
-        src="https://media-exp1.licdn.com/dms/image/C4E03AQF_NNoEObISbQ/profile-displayphoto-shrink_200_200/0/1637042387654?e=1643241600&v=beta&t=JxxxxqUXoh_9U4mYg0ply4TVZoEzd6PC1hzgOzNOFRM">
+    <div class="projects-container">
+        <h3>
+            Projects
+        </h3>
+        <div>
+            <h5>Fitfluence (Social Media Fitness)</h4>
+            <div class="buttons">
+                <a target="_blank" href="https://github.com/cbarry0720/social-fitness-app">Code</a>
+                <a target="_blank">Demo</a>
+            </div>
+        </div>
+        <div>
+            <h5>UMass Dining Calculator</h4>
+            <div class="buttons">
+                <a target="_blank" href="https://github.com/cbarry0720/umassdiningcalculator">Code</a>
+                <a target="_blank" href="/calculator">Demo</a>
+            </div>
+        </div>
+        <div>
+            <h5>Employee Referral Application (CS 320)</h4>
+            <div class="buttons">
+                <a target="_blank" href="https://github.com/Ctrl-Alt-Elite-CS320">Code</a>
+                <a target="_blank" >Demo</a>
+            </div>
+        </div>
+    </div>
+    <iframe id="resume" hidden src="resume.pdf"></iframe>
+    <button id="resume-button" onclick="hideResume()" hidden>X</button>
+    <div class="links-container">
+        <a onclick="email()" target="_blank" >
+            <img class="icon" src="gmail.png">
+        </a>
+        <a href="http://www.linkedin.com/in/christopherwbarry" target="_blank">
+            <img class="icon" src="linkedin.png">
+        </a>
+        <a href="http://www.github.com/cbarry0720" target="_blank">
+            <img class="icon" src="github.png"/>
+        </a>
+        <img onclick="overlayResume()" class="icon" src="resume.png">
+    </div>
 </body>
 
 </html>

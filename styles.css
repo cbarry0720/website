@@ -1,0 +1,46 @@
+.icon{
+    max-height:100px;
+}
+#resume{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#resume-button{
+    font-size: 72px;
+    width: 100px;
+    height: 100px;
+    color: white;
+    background-color: red;
+    position: absolute;
+    left: 10;
+    top: 10;
+    line-height: 50px;
+}
+body{
+   display: flex;
+   flex-direction: column; 
+   padding: 20px;
+}
+div{
+    float: left;
+}
+.icon:hover{
+    cursor: pointer
+}
+.projects-container{
+    display: flex;
+    flex-direction: column;
+}
+.projects-container > div{
+    display:flex;
+    flex-direction: row;
+    width: 50%;
+}
+.buttons{
+    margin-left: auto;
+    margin-right: 0;
+}
+.buttons > a{
+    padding: 10px;
+}
