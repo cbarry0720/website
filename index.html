@@ -13,22 +13,64 @@
         function email() {
             window.open("mailto:cwbarry@umass.edu")
         }
-        function overlayResume(){
-            document.getElementById("resume").removeAttribute("hidden")
-            document.getElementById("resume-button").removeAttribute("hidden")
-        }
-        function hideResume(){
-            document.getElementById("resume").setAttribute("hidden", 1)
-            document.getElementById("resume-button").setAttribute("hidden", 1)
-        }
     </script>
+    <!-- <script src="typed.min.js"></script>
+    <script>
+        var typed = new Typed("#typing",{
+            strings: ["software engineer", "web developer", "student", "student at UMass"],
+        })
+    </script> -->
     <link rel="stylesheet" href="styles.css"/>
 </head>
 
 <body>
-    <div class="about-container">
-        <h1>This is Chris Barry's Website</h1>
-    </div>
+    <span class="about-container">
+
+        <div class="name-container">
+            <img src="assets/profile.jpg" alt="profile picture" />
+            <div class="name">
+                <h1>Hi! I'm Chris Barry</h1>
+                <span>I'm a </span><span id="typing"></span>
+            </div>
+        </div>
+
+        <span class="about">
+            <h2>About Me:</h2>
+            Currently, I'm a computer science student at the University of Massachusetts Amherst. 
+            This past summer (2022), I interned at Wayfair as a software engineer where I worked on a
+            monitoring dashboard on Datadog for the FinTech Accounts Payable team's processors. 
+            <br><br>
+            I have experience in all areas of software development, from frontend to backend to full stack. I regularly
+            work with React, Node, and Python. Recently, I've been working on a project that's a social media app for fitness influencers.
+            I'm also an avid Boston sports fan that loves to play basketball and watch the Celtics.
+            <br><br>
+            I'm always looking to improve my skills and learn new things. Right now, I'm working on my frontend skills particularly since 
+            that's where I have the least experience. I'm also looking to work on my backend skills as well. When I'm not working, I'm usually
+            either hanging out with my friends or playing video games.
+
+        </span>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+        <script>
+            var typed = new Typed('#typing', {
+            strings: [  " software engineer",
+                        " web developer", 
+                        " student", 
+                        " student at UMass Amherst", 
+                        " student at Manning CICS", 
+                        " full stack developer",
+                        " basketball player",
+                        " sports fan",
+                        " computer science student",
+                        " gamer",
+            ],
+            loop: true,
+            typeSpeed: 80,
+            backSpeed: 50,
+            });
+        </script>
+
+    </span>
     <div class="projects-container">
         <h3>
             Projects
@@ -51,24 +93,111 @@
             <h5>Employee Referral Application (CS 320)</h4>
             <div class="buttons">
                 <a target="_blank" href="https://github.com/Ctrl-Alt-Elite-CS320">Code</a>
-                <a target="_blank" >Demo</a>
+                <a href="assets/cs320.pdf" target="_blank" download>Demo</a>
             </div>
         </div>
     </div>
-    <iframe id="resume" hidden src="resume.pdf"></iframe>
-    <button id="resume-button" onclick="hideResume()" hidden>X</button>
+    <div class="education-container">
+        <h3>
+            Education            
+        </h3>
+        <div class="umass-container">
+            <img class="icon-mini" src="assets/umass.png" alt="UMass Amherst">
+            <div class="umass-content">
+                <h4>
+                    University of Massachusetts Amherst
+                </h4>
+                <h6>
+                    Manning College of Information and Computer Sciences
+                </h6>
+                <h6>
+                    2019 - December 2022 (expected)
+                </h6>
+                <h6>
+                    GPA: 3.83
+                </h6>
+                <h6>
+                    Major: Computer Science
+                </h6>
+                <h5>Relevant Courses</h5>
+                <span>
+                    <span>
+                        Math 233: Calculus III
+                        <br>
+                        Math 235: Linear Algebra
+                        <br>
+                        CS 250: Intro to Computation (Discrete Math)
+                        <br>
+                        CS 311: Intro to Algorithms
+                        <br>
+                        CS 320: Software Engineering
+                        <br>
+                        CS 345: Data Management (SQL)
+                        <br>
+                        CS 377: Operating Systems
+                    </span>
+                    <span>
+                        CS 383: Artificial Intelligence
+                        <br>
+                        CS 389: Intro to Machine Learning
+                        <br>
+                        Math 411: Abstract Algebra
+                        <br>
+                        CS 446: Search Engines
+                        <br>
+                        CS 497S: Scalable Web Systems (F22)
+                        <br>
+                        CS 520: Theory and Application of Software Engineering (F22)
+                        <br>
+                        CS 576: Game Programming (F22)
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="experience-container">
+        <h3>Experience</h3>
+        <div class="wayfair-container">
+            <img class="icon-mini" src="assets/wayfair.png" alt="Wayfair">
+            <div class="wayfair-content">
+                <h4>
+                    Wayfair
+                </h4>
+                <h6>
+                    Software Engineer Intern
+                </h6>
+                <h6>
+                    June 2022 - August 2022
+                </h6>
+                <ul>
+                    <li>Built Datadog dashboards that monitor invoice and payment processes for the Accounts Payable FinTech team.</li>
+                    <li>Implemented runtime error logging to PHP and Python processors so the data can show on the dashboards.</li>
+                    <li>Visualized invoicing backlog using Google Data Studio with GBQ to see a status and supplier breakdown.</li>
+                    <li>Collaborated with interns in a week-long project to come up with a Wayfair furniture donation idea for locals.</li>
+                    <li>Counseled with teammates during daily standups and ticket groomings to clarify different areas of work.</li>
+                </ul>
+            </div>
+    </div>
     <div class="links-container">
         <a onclick="email()" target="_blank" >
-            <img class="icon" src="gmail.png">
+            <img class="icon" src="assets/gmail.png">
         </a>
         <a href="http://www.linkedin.com/in/christopherwbarry" target="_blank">
-            <img class="icon" src="linkedin.png">
+            <img class="icon" src="assets/linkedin.png">
         </a>
         <a href="http://www.github.com/cbarry0720" target="_blank">
-            <img class="icon" src="github.png"/>
+            <img class="icon" src="assets/github.png"/>
         </a>
-        <img onclick="overlayResume()" class="icon" src="resume.png">
+        <a href="assets/resume.pdf" target="_blank" download="">
+            <img class="icon" src="assets/resume.png">
+        </a>
     </div>
 </body>
+<footer>
+    <iframe id="resume" class="overlay" src="assets/resume.pdf"></iframe>
+    <button id="resume-button" class="overlay-button" onclick="hide('resume')">X</button>    
+    <iframe id="ppt" class="overlay" hidden src="assets/cs320.pdf"></iframe>
+    <button id="ppt-button" class="overlay-button" onclick="hide('ppt')" hidden>X</button> 
+</footer>
 
 </html>

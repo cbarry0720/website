@@ -1,18 +1,62 @@
 .icon{
     max-height:100px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
-#resume{
+
+.about-container{
+    width: 100%;
+    height: 450px;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.name-container{
+    display: flex;
+    flex-direction: row;
     position: absolute;
+    top: 150px;
+    align-items: center;
+}
+
+.name-container > img{
+    border-radius: 100%;
+    height: 125px;
+    width: 125px;
+    margin-right: 30px;
+}
+
+.name > span {
+    font-size: 20px;
+}
+
+.about{
+    position: absolute;
+    width: 45%;
+    left: 50%;
+}
+.links-container{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    background-color: white;
+    top: 400px;
+    left: 0;
+    width: 100%;
+}
+
+.overlay{
+    position: fixed;
     width: 100%;
     height: 100%;
 }
-#resume-button{
+.overlay-button{
     font-size: 72px;
     width: 100px;
     height: 100px;
-    color: white;
+    color: #f2f2f2;
     background-color: red;
-    position: absolute;
+    position: fixed;
     left: 10;
     top: 10;
     line-height: 50px;
@@ -21,6 +65,10 @@ body{
    display: flex;
    flex-direction: column; 
    padding: 20px;
+   background-image: url("assets/background.png");
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: sans-serif;
 }
 div{
     float: left;
@@ -29,18 +77,83 @@ div{
     cursor: pointer
 }
 .projects-container{
+    background-color: white;
+    position: absolute;
+    top: 500px;
     display: flex;
     flex-direction: column;
+    align-self: center;
+    padding: 25px;
+}
+.projects-container > h3{
+    text-align: center;
 }
 .projects-container > div{
     display:flex;
     flex-direction: row;
-    width: 50%;
+    width: 100%;
 }
 .buttons{
+    display: flex;
+    flex-direction: row;
     margin-left: auto;
     margin-right: 0;
+    line-height: 15px;
 }
 .buttons > a{
     padding: 10px;
+}
+#background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+}
+.education-container{
+    background-color: white;
+    position: absolute;
+    padding: 25px;
+    top: 740px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+.umass-container, .wayfair-container{
+    display: flex;
+    flex-direction: row;
+}
+.education-container > h3{
+    text-align: center;
+}
+.umass-content > span{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.umass-content > span > span{
+    padding-right: 10px;
+}
+.icon-mini{
+    max-height:50px;
+    margin: 10px;
+}
+.umass-content > h6{
+    font-style: italic;
+}
+.experience-container{
+    position: absolute;
+    background-color: white;
+    top: 1230px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding: 25px;
+}
+.experience-container > h3{
+    text-align: center;
+}
+.wayfair-content > h6{
+    font-style: italic;
 }
